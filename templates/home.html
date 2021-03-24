@@ -1,0 +1,42 @@
+{%extends "layout.html"%}
+
+{% block content %}
+<form class="row g-3 needs-validation" novalidate  action="handler.php" method="POST">
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Nombre </label>
+    <input type="text" class="form-control" id="name" name= "1nombre" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="matric" class="form-label">Matricula</label>
+    <input type="text" class="form-control" id="matri" name="1matri" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="1email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="col-12">
+    <div>
+      <label for="reserv">Elija la fecha de Reservacion:</label>
+      <input type="date" id="reserv" name="1fecha" min="2021-01-01" max="2021-12-31" required>
+      <span class="validity"></span>
+    </div>
+  </div>
+  <div class="col-12">
+    <div>
+      <label for="hora">Elija la hora de Reservacion:</label>
+      <input type="time" name="1hora" min="18:00" max="21:00" step="3600" />
+      <span class="validity"></span>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+{% endblock %}
